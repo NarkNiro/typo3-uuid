@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dataset>
+    <pages>
+        <uid>1</uid>
+        <pid>0</pid>
+        <title>FES CP Functional Tests</title>
+        <doktype>1</doktype>
+        <uuid>92c997e6-852d-450b-af87-b9a3440af6e4</uuid>
+        <tsconfig_includes>EXT:content-migration/Configuration/TsConfig/Page.tsconfig, EXT:content-migration/Configuration/TsConfig/Content.tsconfig, EXT:content-migration/Configuration/TsConfig/User.tsconfig</tsconfig_includes>
+    </pages>
+    <pages>
+        <uid>2</uid>
+        <pid>0</pid>
+        <title>FES CP Functional Tests</title>
+        <doktype>1</doktype>
+        <uuid>ea141de9-00e2-489d-b1aa-5719bb676654</uuid>
+    </pages>
+    <pages>
+        <uid>3</uid>
+        <pid>0</pid>
+        <title>FES CP Functional Tests</title>
+        <doktype>1</doktype>
+        <uuid>2087f6ac-b702-4b51-9866-d8c3545a6ce2</uuid>
+        <tsconfig_includes>EXT:content-migration/Configuration/TsConfig/Page.tsconfig</tsconfig_includes>
+    </pages>
+</dataset>

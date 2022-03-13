@@ -1,0 +1,36 @@
+{
+	"name": "narkniro/uuid",
+	"type": "typo3-cms-extension",
+	"description": "",
+	"minimum-stability": "stable",
+	"license": "proprietary",
+	"authors": [
+		{
+			"name": "Mark Houben",
+			"email": "markhouben91@gmail.com"
+		}
+	],
+	"require": {
+		"php" : "^7.4",
+		"typo3/cms-core": "^11.5",
+		"ramsey/uuid": "^4.2"
+	},
+	"require-dev": {
+		"nimut/testing-framework": "^6.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"NarkNiro\\Uuid\\": "Classes"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"NarkNiro\\Uuid\\Tests\\": "Tests"
+		}
+	},
+	"extra": {
+		"typo3/cms": {
+			"extension-key": "uuid"
+		}
+	}
+}
