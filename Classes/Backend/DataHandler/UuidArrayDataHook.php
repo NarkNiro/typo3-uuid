@@ -6,6 +6,10 @@ use Ramsey\Uuid\Uuid;
 
 class UuidArrayDataHook implements PostProcessFieldArrayDataInterface
 {
+    /**
+     * @param string|int $id
+     * @param array<string, mixed> $fieldArray
+     */
     public function processDatamap_postProcessFieldArray(
         string $status,
         string $table,
@@ -13,7 +17,7 @@ class UuidArrayDataHook implements PostProcessFieldArrayDataInterface
         array &$fieldArray,
         \TYPO3\CMS\Core\DataHandling\DataHandler &$dataHandler
     ): void {
-        if ($status !== 'NEW') {
+        if ($status !== 'new') {
             return;
         }
 
@@ -21,7 +25,7 @@ class UuidArrayDataHook implements PostProcessFieldArrayDataInterface
             return;
         }
 
-        if ($fieldArray['uuid'] !== '') {
+        if (isset($fieldArray['uuid']) && $fieldArray['uuid'] !== '') {
             return;
         }
 
