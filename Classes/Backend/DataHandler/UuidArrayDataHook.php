@@ -1,8 +1,10 @@
-<?php declare(strict_types = 1);
+<?php
+
+declare(strict_types = 1);
 
 namespace NarkNiro\Uuid\Backend\DataHandler;
 
-use Ramsey\Uuid\Uuid;
+use Symfony\Component\Uid\Uuid;
 
 class UuidArrayDataHook implements PostProcessFieldArrayDataInterface
 {
@@ -29,6 +31,6 @@ class UuidArrayDataHook implements PostProcessFieldArrayDataInterface
             return;
         }
 
-        $fieldArray['uuid'] = Uuid::uuid4();
+        $fieldArray['uuid'] = Uuid::v4();
     }
 }

@@ -4,9 +4,9 @@ declare(strict_types = 1);
 namespace NarkNiro\Uuid\Tests\Functional\Resolver;
 
 use NarkNiro\Uuid\Resolver\UuidResolver;
-use Nimut\TestingFramework\TestCase\FunctionalTestCase;
 use TYPO3\CMS\Core\Authentication\BackendUserAuthentication;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\TestingFramework\Core\Functional\FunctionalTestCase;
 
 class UuidResolverTest extends FunctionalTestCase
 {

@@ -1,14 +1,15 @@
-<?php declare(strict_types = 1);
+<?php
 
-namespace NarkNiro\Uuid\Tests\Backend\DataHandler;
+declare(strict_types = 1);
+
+namespace NarkNiro\Uuid\Tests\Unit\Backend\DataHandler;
 
 use NarkNiro\Uuid\Backend\DataHandler\PostProcessFieldArrayDataInterface;
 use NarkNiro\Uuid\Backend\DataHandler\UuidArrayDataHook;
-use Nimut\TestingFramework\TestCase\UnitTestCase;
-use Prophecy\Argument;
 use Prophecy\PhpUnit\ProphecyTrait;
 use Prophecy\Prophecy\ObjectProphecy;
 use TYPO3\CMS\Core\DataHandling\DataHandler;
+use TYPO3\TestingFramework\Core\Unit\UnitTestCase;
 
 class UuidArrayDataHookTest extends UnitTestCase
 {
@@ -18,6 +19,8 @@ class UuidArrayDataHookTest extends UnitTestCase
 
     protected function setUp(): void
     {
+        parent::setUp();
+
         $this->subject = new UuidArrayDataHook();
 
         if (!isset($GLOBALS['TCA'])) {
@@ -36,7 +39,10 @@ class UuidArrayDataHookTest extends UnitTestCase
     /** @test */
     public function hasInterface(): void
     {
-        self::assertTrue($this->subject instanceof PostProcessFieldArrayDataInterface, 'DataHandler Hook has not the Interface');
+        self::assertTrue(
+            $this->subject instanceof PostProcessFieldArrayDataInterface,
+            'DataHandler Hook has not the Interface'
+        );
     }
 
     /** @test */
