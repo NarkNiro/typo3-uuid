@@ -39,7 +39,7 @@ class UuidArrayDataHookTest extends UnitTestCase
     /** @test */
     public function hasInterface(): void
     {
-        self::assertTrue(
+        static::assertTrue(
             $this->subject instanceof PostProcessFieldArrayDataInterface,
             'DataHandler Hook has not the Interface'
         );
@@ -64,6 +64,6 @@ class UuidArrayDataHookTest extends UnitTestCase
             $dataHandlerMockObject
         );
 
-        self::assertNotEmpty($fieldArray['uuid']);
+        static::assertNotEmpty($fieldArray['uuid']);
     }
 }

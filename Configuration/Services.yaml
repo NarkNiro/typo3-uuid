@@ -6,4 +6,3 @@ services:
 
   NarkNiro\Uuid\:
     resource: '../Classes/*'
-    exclude: '../Classes/Domain/Model/*'

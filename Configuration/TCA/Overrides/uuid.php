@@ -1,6 +1,6 @@
 <?php
 
-(function () {
+(static function (): void {
     // Adds a field uuid to all TCA defines
     foreach ($GLOBALS['TCA'] as $tableName => $tableDefinition) {
         if (isset($GLOBALS['TCA'][$tableName]['columns']['uuid'])) {

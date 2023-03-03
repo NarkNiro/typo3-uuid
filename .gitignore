@@ -1,7 +1,7 @@
 .idea
 .vscode/
 .Build
-!.Build/Web/.gitkeep
+!.Build/public/.gitkeep
 .ddev/docker-compose.tempfs.yaml
 composer.lock
 *.cache

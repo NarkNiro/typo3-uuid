@@ -29,8 +29,8 @@ class UuidResolverTest extends FunctionalTestCase
     {
         $uid = UuidResolver::findRecordBy('92c997e6-852d-450b-af87-b9a3440af6e4', 'pages');
 
-        self::assertNotNull($uid);
-        self::assertIsInt($uid);
+        static::assertNotNull($uid);
+        static::assertIsInt($uid);
     }
 
     /** @test */
@@ -38,7 +38,7 @@ class UuidResolverTest extends FunctionalTestCase
     {
         $uid = UuidResolver::findRecordBy('478af47b-8980-4517-9b1b-4afdcd3b05ba', 'pages');
 
-        self::assertNull($uid);
+        static::assertNull($uid);
     }
 
     /** @test */
@@ -46,8 +46,8 @@ class UuidResolverTest extends FunctionalTestCase
     {
         $uid = UuidResolver::findByUuid('92c997e6-852d-450b-af87-b9a3440af6e4');
 
-        self::assertNotNull($uid);
-        self::assertIsInt($uid);
+        static::assertNotNull($uid);
+        static::assertIsInt($uid);
     }
 
     /** @test */
@@ -55,6 +55,6 @@ class UuidResolverTest extends FunctionalTestCase
     {
         $uid = UuidResolver::findByUuid('478af47b-8980-4517-9b1b-4afdcd3b05ba');
 
-        self::assertNull($uid);
+        static::assertNull($uid);
     }
 }
